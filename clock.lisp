@@ -2,6 +2,7 @@
 ;; of the format (hour minute second)
 ;; where each element is an integer
 
+
 ;; Return number of seconds since the start of the day from the time
 (defun to-secs (time)
   (let ((hour (car time))

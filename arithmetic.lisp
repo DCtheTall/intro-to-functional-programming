@@ -1,5 +1,6 @@
 ;; Arimetic functions
 
+
 ;; Sum numbers from n to 0
 (defun sum-range (n)
   (if (eq 0 n) 0 (+ n (sum-range (- n 1)))))
