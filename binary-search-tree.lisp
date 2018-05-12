@@ -36,6 +36,17 @@
         (t (bst-equal subtree (right-child tree)))))
 
 
+;; Search a BST for a value
+(defun bst-search (value tree)
+  (cond ((null tree) nil)
+        ((eq value (car tree)) t)
+        ((< value (car tree))
+          (bst-search value
+                      (left-child tree)))
+        (t (bst-search value
+                       (right-child tree)))))
+
+
 ;; Concat two lists
 (defun concat (left right)
   (if (null left)
