@@ -24,3 +24,4 @@
       (funcall fn 0)
       (+ (funcall fn n)
          (sum-apply-range fn (max 0 (- n s)) s))))
+
