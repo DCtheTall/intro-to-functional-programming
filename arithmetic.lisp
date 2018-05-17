@@ -1,4 +1,4 @@
-;; Arimetic functions
+;; Arithmetic functions
 
 
 ;; Sum numbers from n to 0
