@@ -83,3 +83,27 @@
       (list-merge (car lst)
                   (list-merge-flatten (cdr lst)))))
 
+
+;; Map
+(defun list-map (fn lst)
+  (if (null lst)
+      lst
+      (cons (funcall fn (car lst))
+            (list-map fn (cdr lst)))))
+
+
+;; Filter
+(defun list-filter (fn lst)
+  (if (null lst)
+      lst
+      (if (funcall fn (car lst))
+          (cons (car lst) (list-filter fn (cdr lst)))
+          (list-filter fn (cdr lst)))))
+
+
+;; Reduce
+(defun list-reduce (fn lst val)
+  (if (null lst)
+      val
+      (list-reduce fn (cdr lst) (funcall fn val (car lst)))))
+
