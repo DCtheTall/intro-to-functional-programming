@@ -107,3 +107,12 @@
       val
       (list-reduce fn (cdr lst) (funcall fn val (car lst)))))
 
+
+;; List length
+(defun list-length (lst)
+  (labels ((l (n lst)
+                (if (null lst)
+                    n
+                    (l (+ n 1) (cdr lst)))))
+          (l 0 lst)))
+

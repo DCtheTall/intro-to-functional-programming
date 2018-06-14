@@ -25,3 +25,13 @@
       (+ (funcall fn n)
          (sum-apply-range fn (max 0 (- n s)) s))))
 
+
+;; Fibonacci
+(defun fib (n)
+  (labels ((f0 (n) (if (= n 0) 0 (f1 0 1 n)))
+           (f1 (a b n)
+             (if (= n 1)
+                 b
+                 (f1 b (+ a b) (- n 1)))))
+          (f0 n)))
+
