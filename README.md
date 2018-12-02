@@ -1,4 +1,4 @@
-### LISP functions
+### Introduction to Functional Programming with λ-Calculus
 
 After having recently read [An Introduction to Functional Programming Through Lambda Calculus](https://www.amazon.com/Introduction-Functional-Programming-Calculus-Mathematics/dp/0486478831),
 I was inspired to publish my solutions to the last problem set written in LISP.
